@@ -6,15 +6,14 @@ plugins {
 val minecraft_version : String by project
 
 val mod_id: String by project
-val version: String by project
 val mod_name: String by project
 
 val neoforge_version : String by project
 val gremlib_version : String by project
 
 dependencies  {
-    implementation ("io.gremstudio:gremlib:${gremlib_version}+neoforge-${minecraft_version}")
-    interfaceInjectionData("io.gremstudio:gremlib:${gremlib_version}+neoforge-${minecraft_version}")
+    implementation ("io.gremstudio:gremlib:${gremlib_version}+neoforge-${minecraft_version}-SNAPSHOT")
+    interfaceInjectionData("io.gremstudio:gremlib:${gremlib_version}+neoforge-${minecraft_version}-SNAPSHOT")
 }
 
 neoForge {

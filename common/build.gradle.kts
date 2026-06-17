@@ -9,7 +9,7 @@ val neoform_version : String by project
 val mixin_version : String by project
 val fabric_mixin_version : String by project
 val mixin_extras_version : String by project
-
+val gremlib_version : String by project
 
 neoForge {
     neoFormVersion = neoform_version
@@ -38,6 +38,9 @@ dependencies {
     // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
     compileOnly("io.github.llamalad7:mixinextras-common:${mixin_extras_version}")
     annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}")
+
+    implementation("io.gremstudio:gremlib:${gremlib_version}+common-${minecraft_version}-SNAPSHOT")
+    interfaceInjectionData("io.gremstudio:gremlib:${gremlib_version}+common-${minecraft_version}-SNAPSHOT")
 }
 
 
